@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Tooltip, Tag, List, Button, Popconfirm, Switch } from "antd";
 import { CloseOutlined, CheckOutlined } from "@ant-design/icons";
 
-const Todo = ([todo, onTodoRemoval, onTodoToggle]) => {
+const Todo = ({ todo, onTodoRemoval, onTodoToggle }) => {
   return (
     <List.Item
       actions={[
@@ -17,7 +17,7 @@ const Todo = ([todo, onTodoRemoval, onTodoToggle]) => {
           />
         </Tooltip>,
         <Popconfirm
-          title={"Are you sure you want to delete?"}
+          title="Are you sure you want to delete?"
           onConfirm={() => {
             onTodoRemoval(todo);
           }}
